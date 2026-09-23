@@ -1,0 +1,19 @@
+[project]
+name = "asar-ua"
+version = "0.1.0"
+description = "Generic Electron asar locale patcher (extract / apply map / pack / install)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RiasJ1Dar" }]
+keywords = ["electron", "asar", "i18n", "ukrainian", "localization"]
+
+[project.scripts]
+asar-ua = "asar_ua.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["asar_ua*"]
