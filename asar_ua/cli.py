@@ -13,6 +13,13 @@ from asar_ua.install import install_asar, restore_asar
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Help and status lines contain "→". A console or pipe in a legacy code page
+    # (cp1251, cp866) cannot encode it and argparse crashes with
+    # UnicodeEncodeError; print "?" instead of failing.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
+
     p = argparse.ArgumentParser(prog="asar-ua", description="Electron asar locale patcher")
     sub = p.add_subparsers(dest="cmd", required=True)
 
