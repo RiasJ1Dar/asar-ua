@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-26T17:40:31.751Z",
+  "specification": {
+    "path": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+    "sha256": "b06b397167a32286c2b141a0d0388bace83c055fbf685dc3f3c1fe39c98d7668",
+    "bytes": 6858
+  },
+  "artifact": {
+    "path": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+    "sha256": "9c2060cb8171667bc85d1695a68b3569f1218ae8c7adbdfa98dcb889890a1ed3",
+    "bytes": 838067
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Гартунг\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "b06b397167a32286c2b141a0d0388bace83c055fbf685dc3f3c1fe39c98d7668",
+          "bytes": 6858
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 991,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Гартунг\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "6a51ff60-f429-4eab-8869-4f855abd26ea",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+        "output": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "specification": {
+          "sha256": "b06b397167a32286c2b141a0d0388bace83c055fbf685dc3f3c1fe39c98d7668",
+          "bytes": 6858
+        },
+        "artifact": {
+          "sha256": "9c2060cb8171667bc85d1695a68b3569f1218ae8c7adbdfa98dcb889890a1ed3",
+          "bytes": 838067
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "evidence": {
+          "verified": true,
+          "repository": "https://github.com/RiasJ1Dar/asar-ua",
+          "revision": "d1d299b146c0a3e2a0e710a1ded955d6f7be7930",
+          "references": 16
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 260,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Гартунг\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "check",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "artifact": {
+          "sha256": "9c2060cb8171667bc85d1695a68b3569f1218ae8c7adbdfa98dcb889890a1ed3",
+          "bytes": 838067
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 1,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 5,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 7.914893617021277,
+            "maxBends": 3,
+            "routesOverSuggestedBends": 1,
+            "maxStretch": 1.152,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 24,
+            "minInteriorSegmentPx": 68.1,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [
+              {
+                "left": {
+                  "id": "apply-pack",
+                  "from": "apply",
+                  "to": "pack",
+                  "label": "дерево",
+                  "collectionIndex": 5,
+                  "artifactIndex": 6
+                },
+                "right": {
+                  "id": "work-pack",
+                  "from": "work",
+                  "to": "pack",
+                  "label": "читає дерево",
+                  "collectionIndex": 8,
+                  "artifactIndex": 9
+                },
+                "point": [
+                  771.8999999999999,
+                  230
+                ],
+                "sharedNode": "pack"
+              }
+            ],
+            "detours": [
+              {
+                "relationship": {
+                  "id": "work-pack",
+                  "from": "work",
+                  "to": "pack",
+                  "label": "читає дерево",
+                  "collectionIndex": 8,
+                  "artifactIndex": 9
+                },
+                "bends": 3,
+                "stretch": 1.152
+              }
+            ]
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 40,
+            "emptyTopRatio": 0.05,
+            "occupiedTop": 40,
+            "viewBoxTop": 0,
+            "canvasHeight": 808,
+            "typicalNodeHeight": 60,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": true,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "edge",
+              "id": "cli-unpack",
+              "from": "cli",
+              "to": "unpack"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 7.914893617021277,
+            "semanticTextCount": 38
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "6a51ff60-f429-4eab-8869-4f855abd26ea"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 291,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Гартунг\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "6a51ff60-f429-4eab-8869-4f855abd26ea",
+        "artifact": {
+          "path": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+          "sha256": "9c2060cb8171667bc85d1695a68b3569f1218ae8c7adbdfa98dcb889890a1ed3",
+          "bytes": 838067
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/browser-check-runtime",
+            "severity": "error",
+            "message": "browser-check could not complete its Chrome inspection.",
+            "subject": {
+              "artifact": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html"
+            },
+            "evidence": {
+              "reason": "Chrome DevTools write pipe failed: stream closed\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=37152, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=false, ended=true, destroyed=true, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+            },
+            "supportedFixes": [
+              "resolve the reported Chrome inspection error, then rerun browser-check"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "asar-ua.browser-check.json",
+          "files": []
+        },
+        "error": "Chrome DevTools write pipe failed: stream closed\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=37152, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=false, ended=true, destroyed=true, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools write pipe failed: stream closed\nChrome process: still running.\nWindows browser startup may have relaunched before connecting to the DevTools pipe. Retry from a non-elevated PowerShell opened normally, outside an elevated or compatibility-mode parent. Archify does not disable browser de-elevation or the sandbox to preserve pipe handles.\nChrome transport: Node v26.5.0, libuv 1.52.1, win32; pid=37152, exitCode=null, signalCode=null.\nChrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=false, ended=true, destroyed=true, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.finalize.json",
+    "summaryReceipt": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-10-26T17:40:33.751Z",
+  "durationMs": 1999,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-26T17:28:59.599Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

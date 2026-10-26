@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "6a51ff60-f429-4eab-8869-4f855abd26ea",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+  "output": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+  "specification": {
+    "sha256": "b06b397167a32286c2b141a0d0388bace83c055fbf685dc3f3c1fe39c98d7668",
+    "bytes": 6858
+  },
+  "artifact": {
+    "sha256": "9c2060cb8171667bc85d1695a68b3569f1218ae8c7adbdfa98dcb889890a1ed3",
+    "bytes": 838067
+  }
+}

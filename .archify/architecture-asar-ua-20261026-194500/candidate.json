@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "asar-ua: патчер локалі Electron ASAR",
+    "output": ".archify/architecture-asar-ua-20261026-194500/asar-ua.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/RiasJ1Dar/asar-ua.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "d1d299b146c0a3e2a0e710a1ded955d6f7be7930"
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [40, 40],
+    "cols": 5,
+    "cellW": 125,
+    "cellH": 70,
+    "gapX": 60,
+    "gapY": 90
+  },
+  "components": [
+    {
+      "id": "srcAsar", "type": "database", "label": "app.asar", "sublabel": "вхідний архів",
+      "row": 0, "col": 2,
+      "sources": [{ "path": "asar_ua/asar_format.py", "line": 155, "end_line": 158, "label": "читання заголовка" }]
+    },
+    {
+      "id": "mapJson", "type": "database", "label": "locale.uk.json", "sublabel": "мапа рядків",
+      "row": 0, "col": 3,
+      "sources": [
+        { "path": "asar_ua/apply.py", "line": 30, "end_line": 38, "label": "load_map" },
+        { "path": "profiles/demo/locale.uk.json", "line": 1, "label": "демо-профіль" }
+      ]
+    },
+    {
+      "id": "unpack", "type": "backend", "label": "unpack_asar", "sublabel": "pickle-заголовок", "tag": "offset+size",
+      "row": 1, "col": 2,
+      "sources": [{ "path": "asar_ua/asar_format.py", "line": 153, "end_line": 182 }]
+    },
+    {
+      "id": "apply", "type": "backend", "label": "apply_map", "sublabel": "заміна підрядків", "tag": "довші ключі",
+      "row": 1, "col": 3,
+      "sources": [{ "path": "asar_ua/apply.py", "line": 41, "end_line": 69 }]
+    },
+    {
+      "id": "pack", "type": "backend", "label": "pack_asar", "sublabel": "integrity SHA-256",
+      "row": 1, "col": 4,
+      "sources": [
+        { "path": "asar_ua/asar_format.py", "line": 47, "end_line": 138 },
+        { "path": "asar_ua/asar_format.py", "line": 19, "end_line": 45, "label": "calc_file_integrity" }
+      ]
+    },
+    {
+      "id": "user", "type": "external", "label": "Користувач", "sublabel": "термінал",
+      "row": 2, "col": 0,
+      "sources": [{ "path": "README.md", "line": 33, "end_line": 47, "label": "швидкий сценарій" }]
+    },
+    {
+      "id": "cli", "type": "backend", "label": "asar-ua CLI", "sublabel": "6 підкоманд",
+      "row": 2, "col": 1,
+      "sources": [
+        { "path": "asar_ua/cli.py", "line": 15, "end_line": 47, "label": "парсер команд" },
+        { "path": "asar_ua/cli.py", "line": 70, "end_line": 83, "label": "гілка patch" },
+        { "path": "pyproject.toml", "line": 11, "end_line": 12, "label": "точка входу" }
+      ]
+    },
+    {
+      "id": "work", "type": "database", "label": "робоче дерево", "sublabel": "<out>_work/",
+      "row": 2, "col": 3,
+      "sources": [{ "path": "asar_ua/cli.py", "line": 71, "end_line": 77, "label": "створення теки" }]
+    },
+    {
+      "id": "outAsar", "type": "database", "label": "app_uk.asar", "sublabel": "результат",
+      "row": 2, "col": 4,
+      "sources": [{ "path": "asar_ua/asar_format.py", "line": 112, "end_line": 137, "label": ".tmp → rename" }]
+    },
+    {
+      "id": "install", "type": "backend", "label": "install", "sublabel": "і restore",
+      "row": 3, "col": 1,
+      "sources": [{ "path": "asar_ua/install.py", "line": 9, "end_line": 26 }]
+    },
+    {
+      "id": "bak", "type": "database", "label": "app.asar.bak", "sublabel": "резервна копія",
+      "row": 4, "col": 0,
+      "sources": [{ "path": "asar_ua/install.py", "line": 15, "end_line": 17, "label": "створюється раз" }]
+    },
+    {
+      "id": "target", "type": "database", "label": "ціль app.asar", "sublabel": "у застосунку",
+      "row": 4, "col": 1,
+      "sources": [{ "path": "asar_ua/install.py", "line": 11, "end_line": 18 }]
+    }
+  ],
+  "connections": [
+    { "id": "user-cli", "from": "user", "to": "cli", "variant": "emphasis" },
+    { "id": "cli-unpack", "from": "cli", "to": "unpack", "label": "patch", "variant": "emphasis" },
+    { "id": "read-src", "from": "srcAsar", "to": "unpack", "label": "читає" },
+    { "id": "unpack-apply", "from": "unpack", "to": "apply", "label": "дерево", "variant": "emphasis" },
+    { "id": "map-apply", "from": "mapJson", "to": "apply", "label": "мапа" },
+    { "id": "apply-pack", "from": "apply", "to": "pack", "label": "дерево", "variant": "emphasis" },
+    { "id": "unpack-work", "from": "unpack", "to": "work", "label": "пише файли", "fromSide": "bottom", "toSide": "left" },
+    { "id": "apply-work", "from": "apply", "to": "work", "label": "замінює", "fromSide": "bottom", "toSide": "top" },
+    { "id": "work-pack", "from": "work", "to": "pack", "label": "читає дерево", "fromSide": "right", "toSide": "top" },
+    { "id": "pack-out", "from": "pack", "to": "outAsar", "label": "пише", "fromSide": "bottom", "toSide": "top" },
+    { "id": "cli-install", "from": "cli", "to": "install", "label": "install", "fromSide": "bottom", "toSide": "top" },
+    { "id": "out-install", "from": "outAsar", "to": "install", "label": "новий ASAR", "fromSide": "bottom", "toSide": "right" },
+    { "id": "install-target", "from": "install", "to": "target", "label": "copy2", "fromSide": "bottom", "toSide": "top" },
+    { "id": "install-bak", "from": "install", "to": "bak", "label": "один раз", "fromSide": "left", "toSide": "top" },
+    { "id": "bak-target", "from": "bak", "to": "target", "label": "restore", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Конвеєр patch",
+      "items": [
+        "Одна команда робить extract → apply → pack",
+        "Робоча тека створюється заново; наявна видаляється",
+        "Окремі підкоманди extract, apply і pack доступні теж"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Заміна рядків",
+      "items": [
+        "Точний пошук підрядка, не розбір JavaScript",
+        "Нечитані як UTF-8 файли пропускаються",
+        "Шрифти, медіа, .node, .dll, .exe, .wasm не змінюються"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Цілісність і відкат",
+      "items": [
+        "Integrity-блоки ASAR лишаються на SHA-256, як вимагає Electron",
+        "install створює .bak лише коли його ще немає",
+        "restore падає з помилкою, якщо .bak відсутній"
+      ]
+    }
+  ]
+}
