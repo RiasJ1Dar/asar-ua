@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "receiptId": "6a51ff60-f429-4eab-8869-4f855abd26ea",
+  "receiptId": "4a31001a-8763-4fae-9ff9-f24a65bf3ec7",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
-  "input": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
-  "output": "C:\\Users\\Public\\archify-20261026\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
+  "input": "C:\\Users\\Public\\archify-push\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\candidate.json",
+  "output": "C:\\Users\\Public\\archify-push\\asar-ua\\.archify\\architecture-asar-ua-20261026-194500\\asar-ua.html",
   "specification": {
     "sha256": "b06b397167a32286c2b141a0d0388bace83c055fbf685dc3f3c1fe39c98d7668",
     "bytes": 6858
